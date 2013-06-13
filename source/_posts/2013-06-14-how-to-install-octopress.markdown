@@ -72,9 +72,13 @@ categories:
 	```
 
 	範例:
-
+  
+  程式碼: 
 	``` Ruby
 		def index
 			@posts = Post.all
 		end
 	```
+
+	插入圖片(可把圖片存放在source/images底下):
+	{% img center /images/my_car/Audi-R8-GT_1280x1024.jpeg 1280 1024 'image' 'images' %}
