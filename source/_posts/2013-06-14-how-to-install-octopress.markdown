@@ -7,21 +7,16 @@ categories:
 ---
 
 
-
-#### 1.安裝RVM for Mac
-	$ bash -s stable < <(curl -s https://raw.github.com/wayneeseguin/rvm/master/binscripts/rvm-installer)
-	$ . ~/.profile
-	$ source ~/.profile
-
-#### 2.安裝 Ruby
+### 1.安裝RVM & Ruby for Mac
+	$ \curl -L https://get.rvm.io | bash -s stable --ruby
 	$ rvm install 1.9.3
 	$ rvm use 1.9.3 --default
 	$ rvm rubygems current
 
-#### 3.安裝bundler
+### 2.安裝bundler
 	$ gem install bundler
 	
-#### 4.下載Octpress專案
+### 3.下載Octpress專案
 	$ git clone git://github.com/imathis/octopress.git octopress
 	$ cd octopress
 	$ bundle install
@@ -34,7 +29,7 @@ categories:
    解決方式 : 找到Gemfile.lock搜尋rake並把0.9.2.2改成10.0.4, 依照妳目前已經有什麼的rake版本, 就改什麼版本完成之後, 重跑指令。
 	$ rake install
 
-#### 5.發佈到GitHub(免費)
+### 4.發佈到GitHub(免費)
    
    (1)請至<a target="_blank" href="https://github.com">[GitHub]</a>建立Repository, 並使用 your_username.github.io 命名。
    <br />
@@ -61,7 +56,9 @@ categories:
 	$ git commit -m 'initial source commit'
 	$ git push origin source
 
-   等個幾分鐘只要連 http://your_username.github.io 就可以看到自己的網頁拉!!
+   每次寫完部落格上傳到Gihub之後, 最後還要再佈署, 才會看到改變哦!
+	$ rake deploy
+   等個幾分鐘只要連 http://your_username.github.io 就可以看到自己的網頁拉!!<br />
    就跟我這個網址  http://luckily.github.io 一樣XD
 
 
