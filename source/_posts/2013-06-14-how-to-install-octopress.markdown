@@ -1,0 +1,83 @@
+---
+layout: post
+title: "How-to-install-octopress"
+date: 2013-06-14 00:58
+comments: true
+categories: 
+---
+
+
+
+#### 1.安裝RVM for Mac
+	$ bash -s stable < <(curl -s https://raw.github.com/wayneeseguin/rvm/master/binscripts/rvm-installer)
+	$ . ~/.profile
+	$ source ~/.profile
+
+#### 2.安裝 Ruby
+	$ rvm install 1.9.3
+	$ rvm use 1.9.3 --default
+	$ rvm rubygems current
+
+#### 3.安裝bundler
+	$ gem install bundler
+	
+#### 4.下載Octpress專案
+	$ git clone git://github.com/imathis/octopress.git octopress
+	$ cd octopress
+	$ bundle install
+	$ rake install
+
+   若發生此錯誤訊息
+	rake aborted!
+	You have already activated rake 10.0.4, but your Gemfile requires rake 0.9.2.2. Using bundle exec may solve this.
+
+   解決方式 : 找到Gemfile.lock搜尋rake並把0.9.2.2改成10.0.4, 依照妳目前已經有什麼的rake版本, 就改什麼版本完成之後, 重跑指令。
+	$ rake install
+
+#### 5.發佈到GitHub(免費)
+   
+   (1)請至<a target="_blank" href="https://github.com">[GitHub]</a>建立Repository, 並使用 your_username.github.io 命名。
+   <br />
+   Ex : luckily.github.io
+
+   (2)接著設定Github Pages, 輸入下列指令
+	$ rake setup_github_pages
+
+   (3)終端機會提示以下字樣, 要你輸入建立Repository的Github網址
+   <br>
+	Enter the read/write url for your repository
+	(For example, 'git@github.com:your_username/your_username.github.io')
+	Repository url:
+
+   (4)像我就輸入
+	$ git@github.com:luckily/luckily.github.com.io
+
+   (5)建立及佈署
+	$ rake generate
+	$ rake deploy
+
+   (6)將source也加入git
+	$ git add .
+	$ git commit -m 'initial source commit'
+	$ git push origin source
+
+   等個幾分鐘只要連 http://your_username.github.io 就可以看到自己的網頁拉!!
+   就跟我這個網址  http://luckily.github.io 一樣XD
+
+
+	# TODO
+	1.此篇為安裝篇
+	2.使用篇指令&語法篇
+
+	```  [程式語言]
+	  code
+
+	```
+
+	範例:
+
+	``` Ruby
+		def index
+			@posts = Post.all
+		end
+	```
