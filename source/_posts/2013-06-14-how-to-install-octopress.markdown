@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "How-to-install-octopress"
+title: "Octopress - 安裝篇"
 date: 2013-06-14 00:58
 comments: true
 categories: 
