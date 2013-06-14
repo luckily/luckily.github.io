@@ -40,6 +40,8 @@ categories:
 
 要的不多, 只要能**貼code**、**貼圖**、**簡單佈署**, 然後最重要的是除了能免費掛上網、還能有免費的**網域**!!
 
+除了上述優點外, 還可以練習佈署、版本控制(git)..等等優點, 可謂『摸蛤仔兼洗褲』XD
+
 <a href="http://octopress.org/" title="Ooctopress">Ooctopress</a>是一套部落格產生器, 內容編輯採用<a href="http://markdown.tw/" title="markdown">Markdown</a>語法。
 
 其實有跟我相同需求的人, 這套Octopress在下就非常推薦了。
