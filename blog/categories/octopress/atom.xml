@@ -1,0 +1,383 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Octopress | My Octopress Blog]]></title>
+  <link href="http://luckily.github.io/blog/categories/octopress/atom.xml" rel="self"/>
+  <link href="http://luckily.github.io/"/>
+  <updated>2013-06-21T02:08:16+08:00</updated>
+  <id>http://luckily.github.io/</id>
+  <author>
+    <name><![CDATA[Your Name]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Octopress - 使用篇]]></title>
+    <link href="http://luckily.github.io/blog/2013/06/20/how-to-use-octopress/"/>
+    <updated>2013-06-20T16:43:00+08:00</updated>
+    <id>http://luckily.github.io/blog/2013/06/20/how-to-use-octopress</id>
+    <content type="html"><![CDATA[<h2>Octopress常用的語法</h2>
+
+<p>1.建立文章
+   正常的情況下執行此行:</p>
+
+<pre><code>$ rake rake new_post['how-to-use-octopress']
+</code></pre>
+
+<p>   但如果你使用的是zsh shell的話, 就必須這樣打:</p>
+
+<pre><code>$ rake rake "new_post[how-to-use-octopress]"
+</code></pre>
+
+<br />
+
+
+<!--more-->
+
+
+<p>2.建立/更新</p>
+
+<pre><code>$ rake generate
+</code></pre>
+
+<p>   每一次只要有執行過<code>rake rake new_post</code>來產生文章之後, 都必須使用下列指令, 之後在網頁重整才能看到剛剛建立的文章。</p>
+
+<br />
+
+
+<p>3.本機預覽</p>
+
+<pre><code>$ rake preview
+</code></pre>
+
+<p>   可以在<code><a href="http://localhost:4000">http://localhost:4000</a></code>上預覽Blog, 順便一提, <strong>如果只是修改文章內容, 其實只要重整就可以看到修改後的變化</strong>, 換言之&hellip;只有執行<code>rake new_post</code>之後, 才需要再執行<code>rake generate</code>。</p>
+
+<br />
+
+
+<p>4.寫完文章之後要上傳至Github</p>
+
+<pre><code>$ git add .
+$ git commit -m 'OK, push.'
+$ git push origin source
+</code></pre>
+
+<br />
+
+
+<p>5.佈署部落格</p>
+
+<pre><code>$ rake deploy
+</code></pre>
+
+<p>   記得佈署前都應該要先做第4點的動作, 佈署完成就可以到<code><a href="http://user_name.github.io">http://user_name.github.io</a></code>看看部落格最新的狀況囉。</p>
+
+<h2>在別台電腦也要使用Octopress</h2>
+
+<p>   很多人常常也會有兩三台電腦(筆電/桌機), 所以也會有不同電腦使用Octopress的需求, 要注意的是一般文章原始檔或圖片都放在soruce的分支。
+   首先一樣安裝完Octopress並進入該目錄。</p>
+
+<pre><code>$ git clone git://github.com/imathis/octopress.git octopress
+$ cd octopress
+</code></pre>
+
+<p>   然後, 按照步驟先綁GitHub</p>
+
+<pre><code>$ rake setup_github_pages
+</code></pre>
+
+<p>   <code>rake setup_github_pages</code>這個動作會做以下幾點:</p>
+
+<p>   (1)要你輸入Repository的路徑，這時請將Github上面SSH的路徑複製下來貼上，如git@github.com:luckily/luckily.github.io.git<br />
+   (2)把你的 octopress remote source name 從 origin 改成 octopress<br />
+   (3)把你剛剛輸入的git repostiry 換成 default origin remote.<br />
+   (4)切換你的 branch from master to source.<br />
+   (5)Configure your blog’s url according to your repository.<br />
+   (6)Setup a master branch in the _deploy directory for deployment.<br /></p>
+
+<p>   感謝:<a href="http://wwssllabcd.github.io/blog/2012/08/01/how-to-install-octopress-on-window/" title="printf(" I'm EricWang ")">printf(&ldquo; I&rsquo;m EricWang &rdquo;)</a>來源解釋這段:D</p>
+
+<p>   依照指示輸入<code><a href="https://github.com/your_username/your_username.github.io">https://github.com/your_username/your_username.github.io</a>)</code>, 完成之後接著輸入下面那行git指令, 把原始檔下載下來</p>
+
+<pre><code>$ git pull origin source
+</code></pre>
+
+<p>   下載下來OK之後, 當然還是要輸入下面這幾行, 才能用<code>rake preview</code>來本機觀看囉!</p>
+
+<pre><code>$ bundle install
+$ rake install
+$ rake generate
+</code></pre>
+
+<h2>Octopress好用的功能</h2>
+
+<h4>加上分類列表和標籤雲</h4>
+
+<p>安裝起來很簡單請參考以下資源<a href="http://gibuloto.com/blog/octopress-categories-tag-cloud/">幫 Octopress 加上分類列表和標籤雲</a>或是<a href="https://github.com/tokkonopapa/octopress-tagcloud">官方</a></p>
+
+<p>(1)去<a href="https://github.com/tokkonopapa/octopress-tagcloud">官方</a>下載plugins<br />
+(2)把這三個檔案<code>tag_cloud.rb</code>、<code>category_list.html</code>、<code>tag_cloud.html</code>放到相對應的位置</p>
+
+<pre><code>.
+├─ plugins/
+│  └── tag_cloud.rb
+└─ source/
+   └─ _includes/
+      └─ custom/
+         └─ asides/
+            ├─ category_list.html
+            └─ tag_cloud.html
+</code></pre>
+
+<p>(3)編輯_config.yml
+<code>yml
+  # list each of the sidebar modules you want to include, in the order you want them to appear.
+  # To add custom asides, create files in /source/_includes/custom/asides/ and add them to the list like 'custom/asides/custom_aside_name.html'
+  default_asides: [custom/asides/category_list.html, asides/recent_posts.html, asides/github.html, asides/delicious.html, asides/pinboard.html, asides/googleplus.html]
+</code>
+(4)執行<code>rake generate</code>
+完成之後就會像這樣~呼！！
+<img class="center" src="/images/2013-06-21/category_list.png" width="294" height="211" title="&lsquo;image&rsquo; &lsquo;images&rsquo;" ></p>
+
+<br />
+
+
+<hr />
+
+<br />
+
+
+<h2>如果不幸的git pull的時候發生錯誤</h2>
+
+<pre><code>error: Your local changes to the following files would be overwritten by merge:
+  Gemfile.lock
+  Rakefile
+  _config.yml
+Please, commit your changes or stash them before you can merge.
+</code></pre>
+
+<p>打在終端機打上git指令<code>git status</code>發現有三個檔案沒有commit所以不讓我merge!</p>
+
+<pre><code># On branch source
+# Changes not staged for commit:
+#   (use "git add &lt;file&gt;..." to update what will be committed)
+#   (use "git checkout -- &lt;file&gt;..." to discard changes in working directory)
+#
+# modified:   Gemfile.lock
+# modified:   Rakefile
+# modified:   _config.yml
+#
+no changes added to commit (use "git add" and/or "git commit -a")
+</code></pre>
+
+<p>有兩種方法, 第一種:是直接commit, 之後merge.</p>
+
+<pre><code>$ git add . &amp;&amp; git commit -m 'commit file before merge.'
+$ git pull origin source
+</code></pre>
+
+<p>第二種:我當下的作法, 是把所有的檔案都先checkout掉&hellip;就OK了= =</p>
+
+<pre><code>$ git checkout -- Gemfile.lock Rakefile _config.yml
+$ git pull origin source
+</code></pre>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Octopress - 第一篇文章]]></title>
+    <link href="http://luckily.github.io/blog/2013/06/14/why-octopress/"/>
+    <updated>2013-06-14T14:42:00+08:00</updated>
+    <id>http://luckily.github.io/blog/2013/06/14/why-octopress</id>
+    <content type="html"><![CDATA[<h2>寫Code的人想有個筆記兼具分享的部落格</h2>
+
+<p>其實很久以前就有想要搞一個技術部落格, 在這之前有用過無名、痞客邦，但貼code的時候總不能就直接control+c然後control+v吧 ? 因為直接貼code上去既醜又沒人看的懂&hellip;<!--more--></p>
+
+<p>如果要像有像下面這樣的背景效果, 還要自己掛css上去, 真的太麻煩了
+<img class="center" src="/images/2013-06-14/blog_view_code.png" width="512" height="100" title="&lsquo;image&rsquo; &lsquo;images&rsquo;" ></p>
+
+<br />
+
+
+<h2>輕鬆簡單</h2>
+
+<p>要的不多, 只要能<strong>貼code</strong>、<strong>貼圖</strong>、<strong>簡單佈署</strong>, 然後最重要的是除了能免費掛上網、還能有免費的<strong>網域</strong>!!</p>
+
+<p>除了上述優點外, 還可以練習佈署、版本控制(git)..等等優點, 可謂『摸蛤仔兼洗褲』XD</p>
+
+<p><a href="http://octopress.org/" title="Ooctopress">Ooctopress</a>是一套部落格產生器, 內容編輯採用<a href="http://markdown.tw/" title="markdown">Markdown</a>語法。</p>
+
+<p>其實有跟我相同需求的人, 這套Octopress在下就非常推薦了, 但如果只是純粹想寫寫心情, 非需要貼code性質的需求, 那還是建議用痞客邦、無名吧&hellip;不然你會想自殺的。</p>
+
+<br />
+
+
+<h3>例如使用如下markdown語法</h3>
+
+<p>```</p>
+
+<pre><code>``` ruby
+    def show
+        @posts = Post.where(:enabled =&gt; ture)
+    end
+```
+</code></pre>
+
+<p>```</p>
+
+<p>即可得到這樣的效果
+``` ruby</p>
+
+<pre><code>def show
+    @posts = Post.where(:enabled =&gt; ture)
+end
+</code></pre>
+
+<p>```</p>
+
+<p>如果要插入圖片, 就先把圖片存放在source/images底下:
+然後放以下markdown語法:
+<code>
+  <img class="center" src="/images/my_car/Audi-R8-GT_1280x1024.jpeg" width="1280" height="1024" title="image" alt="images">
+</code>
+或者直接用html語法也行
+<code>
+  &lt;img class="center" src="http://luckily.github.io/images/my_car/Audi-R8-GT_1280x1024.jpeg" width="1280" height="1024" title="image" alt="images"&gt;
+</code></p>
+
+<p>效果
+<img class="center" src="/images/my_car/Audi-R8-GT_1280x1024.jpeg" width="1280" height="1024" title="&lsquo;image&rsquo; &lsquo;images&rsquo;" ></p>
+
+<br />
+
+
+<h2>參考</h2>
+
+<p>其實網路上隨便搜尋個Octopress關鍵字, 都有一拖拉酷的資源可以查, 下面是覺得很不錯的資源, 他們也對Octopress是什麼東西介紹的很詳細, 可以去看看，他們也都是用Octopress。</p>
+
+<p>待小弟有空在來多講講關於這東西是怎麼一回事，小弟還是個新手XD</p>
+
+<p><a href="http://blog.xdite.net/posts/2011/10/07/what-is-octopress/" title="xidte" target="_blank">Why Octopress? By XDite</a></p>
+
+<p><a href="http://wwssllabcd.github.io/blog/2012/08/01/how-to-install-octopress-on-window/" target="_blank">Octopress 安裝教學、心得筆記 (Windows)</a></p>
+
+<p><a href="http://garylai1990.github.io/blog/2012/12/18/di-ci-yong-octopressjiu-shang-shou/" target="_blank">第一次用Octopress就上手</a></p>
+
+<p><a href="http://wwssllabcd.github.io/blog/2012/08/01/how-to-install-octopress-on-window/" target="_blank" title="printf(" I'm EricWang ")">printf(&ldquo; I&rsquo;m EricWang &rdquo;)</a></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Octopress - 安裝篇]]></title>
+    <link href="http://luckily.github.io/blog/2013/06/14/how-to-install-octopress/"/>
+    <updated>2013-06-14T00:58:00+08:00</updated>
+    <id>http://luckily.github.io/blog/2013/06/14/how-to-install-octopress</id>
+    <content type="html"><![CDATA[<h3>1.安裝RVM &amp; Ruby for Mac</h3>
+
+<pre><code>$ \curl -L https://get.rvm.io | bash -s stable --ruby
+$ rvm install 1.9.3
+$ rvm use 1.9.3 --default
+$ rvm rubygems current
+</code></pre>
+
+<h3>2.安裝bundler</h3>
+
+<pre><code>$ gem install bundler
+</code></pre>
+
+<h3>3.下載Octpress專案</h3>
+
+<pre><code>$ git clone git://github.com/imathis/octopress.git octopress
+$ cd octopress
+$ bundle install
+$ rake install
+</code></pre>
+
+<!--more-->
+
+
+<p>   若發生此錯誤訊息</p>
+
+<pre><code>rake aborted!
+You have already activated rake 10.0.4, but your Gemfile requires rake 0.9.2.2. Using bundle exec may solve this.
+</code></pre>
+
+<p>   解決方式 : 找到Gemfile.lock搜尋rake並把0.9.2.2改成10.0.4, 依照妳目前已經有什麼的rake版本, 就改什麼版本完成之後, 重跑指令。</p>
+
+<pre><code>$ rake install
+</code></pre>
+
+<h3>4.發佈到GitHub(免費)</h3>
+
+<p>   (1)請至<a target="_blank" href="https://github.com">[GitHub]</a>建立Repository, 並使用 your_username.github.io 命名。
+   <br />
+   Ex : luckily.github.io</p>
+
+<p>   (2)接著設定Github Pages, 輸入下列指令</p>
+
+<pre><code>$ rake setup_github_pages
+</code></pre>
+
+<p>   (3)終端機會提示以下字樣, 要你輸入建立Repository的Github網址
+   <br></p>
+
+<pre><code>Enter the read/write url for your repository
+(For example, 'git@github.com:your_username/your_username.github.io')
+Repository url:
+</code></pre>
+
+<p>   (4)像我就輸入</p>
+
+<pre><code>$ git@github.com:luckily/luckily.github.com.io
+</code></pre>
+
+<p>   (5)建立及佈署</p>
+
+<pre><code>$ rake generate
+$ rake deploy
+</code></pre>
+
+<p>   (6)將source也加入git</p>
+
+<pre><code>$ git add .
+$ git commit -m 'initial source commit'
+$ git push origin source
+</code></pre>
+
+<p>   每次寫完部落格上傳到Gihub之後, 最後還要再佈署, 才會看到改變哦!</p>
+
+<pre><code>$ rake deploy
+</code></pre>
+
+<p>   等個幾分鐘只要連 <a href="http://your_username.github.io">http://your_username.github.io</a> 就可以看到自己的網頁拉!!<br />
+   就跟我這個網址  <a href="http://luckily.github.io">http://luckily.github.io</a> 一樣XD</p>
+
+<pre><code># TODO
+1.此篇為安裝篇
+2.使用篇指令&amp;語法篇
+
+```  [程式語言]
+  code
+
+```
+
+範例:
+</code></pre>
+
+<p>  程式碼:</p>
+
+<pre><code>``` ruby
+    def index
+        @posts = Post.all
+    end
+```
+
+插入圖片(可把圖片存放在source/images底下):
+<img class="center" src="/images/my_car/Audi-R8-GT_1280x1024.jpeg" width="1280" height="1024" title="image" alt="images">
+</code></pre>
+]]></content>
+  </entry>
+  
+</feed>

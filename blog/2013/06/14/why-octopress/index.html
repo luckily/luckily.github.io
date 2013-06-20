@@ -1,0 +1,292 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Octopress - 第一篇文章 - My Octopress Blog</title>
+  <meta name="author" content="Your Name">
+
+  
+  <meta name="description" content="寫Code的人想有個筆記兼具分享的部落格 其實很久以前就有想要搞一個技術部落格, 在這之前有用過無名、痞客邦，但貼code的時候總不能就直接control+c然後control+v吧 ? 因為直接貼code上去既醜又沒人看的懂&hellip; 如果要像有像下面這樣的背景效果, 還要自己掛css上去 &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://luckily.github.io/blog/2013/06/14/why-octopress">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="My Octopress Blog" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/lib/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">My Octopress Blog</a></h1>
+  
+    <h2>A blogging framework for hackers.</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:luckily.github.io" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Octopress - 第一篇文章</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-06-14T14:42:00+08:00" pubdate data-updated="true">Jun 14<span>th</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><h2>寫Code的人想有個筆記兼具分享的部落格</h2>
+
+<p>其實很久以前就有想要搞一個技術部落格, 在這之前有用過無名、痞客邦，但貼code的時候總不能就直接control+c然後control+v吧 ? 因為直接貼code上去既醜又沒人看的懂&hellip;<!--more--></p>
+
+<p>如果要像有像下面這樣的背景效果, 還要自己掛css上去, 真的太麻煩了
+<img class="center" src="/images/2013-06-14/blog_view_code.png" width="512" height="100" title="image" alt="images"></p>
+
+<br />
+
+
+<h2>輕鬆簡單</h2>
+
+<p>要的不多, 只要能<strong>貼code</strong>、<strong>貼圖</strong>、<strong>簡單佈署</strong>, 然後最重要的是除了能免費掛上網、還能有免費的<strong>網域</strong>!!</p>
+
+<p>除了上述優點外, 還可以練習佈署、版本控制(git)..等等優點, 可謂『摸蛤仔兼洗褲』XD</p>
+
+<p><a href="http://octopress.org/" title="Ooctopress">Ooctopress</a>是一套部落格產生器, 內容編輯採用<a href="http://markdown.tw/" title="markdown">Markdown</a>語法。</p>
+
+<p>其實有跟我相同需求的人, 這套Octopress在下就非常推薦了, 但如果只是純粹想寫寫心情, 非需要貼code性質的需求, 那還是建議用痞客邦、無名吧&hellip;不然你會想自殺的。</p>
+
+<br />
+
+
+<h3>例如使用如下markdown語法</h3>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>``` ruby
+</span><span class='line'>  def show
+</span><span class='line'>      @posts = Post.where(:enabled =&gt; ture)
+</span><span class='line'>  end
+</span><span class='line'>```</span></code></pre></td></tr></table></div></figure>
+
+
+<p>即可得到這樣的效果</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">def</span> <span class="nf">show</span>
+</span><span class='line'>  <span class="vi">@posts</span> <span class="o">=</span> <span class="no">Post</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="ss">:enabled</span> <span class="o">=&gt;</span> <span class="n">ture</span><span class="p">)</span>
+</span><span class='line'><span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>如果要插入圖片, 就先把圖片存放在source/images底下:
+然後放以下markdown語法:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'>  <span class="p">{</span><span class="o">%</span> <span class="n">img</span> <span class="n">center</span> <span class="sr">/images/m</span><span class="n">y_car</span><span class="o">/</span><span class="no">Audi</span><span class="o">-</span><span class="no">R8</span><span class="o">-</span><span class="no">GT_1280x1024</span><span class="o">.</span><span class="n">jpeg</span> <span class="mi">1280</span> <span class="mi">1024</span> <span class="s1">&#39;image&#39;</span> <span class="s1">&#39;images&#39;</span> <span class="o">%</span><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>或者直接用html語法也行</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'>  <span class="o">&lt;</span><span class="n">img</span> <span class="n">class</span><span class="o">=</span><span class="s2">&quot;center&quot;</span> <span class="n">src</span><span class="o">=</span><span class="s2">&quot;/images/my_car/Audi-R8-GT_1280x1024.jpeg&quot;</span> <span class="n">width</span><span class="o">=</span><span class="s2">&quot;1280&quot;</span> <span class="n">height</span><span class="o">=</span><span class="s2">&quot;1024&quot;</span> <span class="n">title</span><span class="o">=</span><span class="s2">&quot;image&quot;</span> <span class="n">alt</span><span class="o">=</span><span class="s2">&quot;images&quot;</span><span class="o">&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>效果
+<img class="center" src="/images/my_car/Audi-R8-GT_1280x1024.jpeg" width="1280" height="1024" title="image" alt="images"></p>
+
+<br />
+
+
+<h2>參考</h2>
+
+<p>其實網路上隨便搜尋個Octopress關鍵字, 都有一拖拉酷的資源可以查, 下面是覺得很不錯的資源, 他們也對Octopress是什麼東西介紹的很詳細, 可以去看看，他們也都是用Octopress。</p>
+
+<p>待小弟有空在來多講講關於這東西是怎麼一回事，小弟還是個新手XD</p>
+
+<p><a href="http://blog.xdite.net/posts/2011/10/07/what-is-octopress/" title="xidte" target="_blank">Why Octopress? By XDite</a></p>
+
+<p><a href="http://wwssllabcd.github.io/blog/2012/08/01/how-to-install-octopress-on-window/" target="_blank">Octopress 安裝教學、心得筆記 (Windows)</a></p>
+
+<p><a href="http://garylai1990.github.io/blog/2012/12/18/di-ci-yong-octopressjiu-shang-shou/" target="_blank">第一次用Octopress就上手</a></p>
+
+<p><a href="http://wwssllabcd.github.io/blog/2012/08/01/how-to-install-octopress-on-window/" target="_blank" title="printf(" I'm EricWang ")">printf(&ldquo; I&rsquo;m EricWang &rdquo;)</a></p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Your Name</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-06-14T14:42:00+08:00" pubdate data-updated="true">Jun 14<span>th</span>, 2013</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/octopress/'>Octopress</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://luckily.github.io/blog/2013/06/14/why-octopress/" data-via="" data-counturl="http://luckily.github.io/blog/2013/06/14/why-octopress/" >Tweet</a>
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2013/06/14/how-to-install-octopress/" title="Previous Post: Octopress - 安裝篇">&laquo; Octopress - 安裝篇</a>
+      
+      
+        <a class="basic-alignment right" href="/blog/2013/06/20/how-to-use-octopress/" title="Next Post: Octopress - 使用篇">Octopress - 使用篇 &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2013/06/20/how-to-use-octopress/">Octopress - 使用篇</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/06/14/why-octopress/">Octopress - 第一篇文章</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/06/14/how-to-install-octopress/">Octopress - 安裝篇</a>
+      </li>
+    
+  </ul>
+</section>
+
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2013 - Your Name -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>
