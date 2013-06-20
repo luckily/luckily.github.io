@@ -3,7 +3,7 @@ layout: post
 title: "Octopress - 安裝篇"
 date: 2013-06-14 00:58
 comments: true
-categories: 
+categories: Octopress
 ---
 
 
@@ -21,6 +21,8 @@ categories:
 	$ cd octopress
 	$ bundle install
 	$ rake install
+
+<!--more-->
 
    若發生此錯誤訊息
 	rake aborted!
