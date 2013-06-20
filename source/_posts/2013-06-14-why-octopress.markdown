@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Octopress"
+title: "Octopress - 第一篇文章"
 date: 2013-06-14 14:42
 comments: true
 categories: 
