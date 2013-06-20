@@ -24,7 +24,7 @@ categories:
 
 <a href="http://octopress.org/" title="Ooctopress">Ooctopress</a>是一套部落格產生器, 內容編輯採用<a href="http://markdown.tw/" title="markdown">Markdown</a>語法。
 
-其實有跟我相同需求的人, 這套Octopress在下就非常推薦了。
+其實有跟我相同需求的人, 這套Octopress在下就非常推薦了, 但如果只是純粹想寫寫心情, 非需要貼code性質的需求, 那還是建議用痞客邦、無名吧...不然你會想自殺的。
 - - -
 <br />
 

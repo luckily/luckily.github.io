@@ -32,7 +32,9 @@ categories:
 
 <br />
 
-4.上傳至Github
+4.寫完文章之後要上傳至Github
+	$ git add .
+	$ git commit -m 'OK, push.'
 	$ git push origin source
 
 
@@ -40,7 +42,7 @@ categories:
 
 5.佈署部落格
 	$ rake deploy
-   記得佈署前都應該要先<code>git push origin source</code>, 佈署完成就可以到Github給你的網址<code>http://user_name.github.io</code>看看囉!
+   記得佈署前都應該要先做第4點的動作, 佈署完成就可以到<code>http://user_name.github.io</code>看看部落格最新的狀況囉。
 
 
 
