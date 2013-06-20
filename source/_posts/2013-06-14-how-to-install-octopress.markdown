@@ -74,7 +74,7 @@ categories:
 	範例:
   
   程式碼: 
-	``` Ruby
+	``` ruby
 		def index
 			@posts = Post.all
 		end

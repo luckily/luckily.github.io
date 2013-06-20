@@ -12,26 +12,6 @@ categories:
 
 如果要像有像下面這樣的背景效果, 還要自己掛css上去, 真的太麻煩了
 {% img center /images/2013-06-14/blog_view_code.png 512 100 'image' 'images' %}
-
-- - -
-<br />
-
-
-### 例如
-
-	``` Ruby
-		def show
-			@posts = Post.where(:enabled => ture)
-		end
-	```
-
-只要使用上述的語法即可得到這樣的效果
-
-``` Ruby
-	def show
-		@posts = Post.where(:enabled => ture)
-	end
-```
 - - -
 <br />
 
@@ -45,7 +25,25 @@ categories:
 <a href="http://octopress.org/" title="Ooctopress">Ooctopress</a>是一套部落格產生器, 內容編輯採用<a href="http://markdown.tw/" title="markdown">Markdown</a>語法。
 
 其實有跟我相同需求的人, 這套Octopress在下就非常推薦了。
+- - -
+<br />
 
+
+### 例如
+
+	``` ruby
+		def show
+			@posts = Post.where(:enabled => ture)
+		end
+	```
+
+只要使用上述的語法即可得到這樣的效果
+
+``` ruby
+	def show
+		@posts = Post.where(:enabled => ture)
+	end
+```
 - - -
 <br />
 
