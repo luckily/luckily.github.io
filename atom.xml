@@ -4,7 +4,7 @@
   <title><![CDATA[Programing Notes.]]></title>
   <link href="http://luckily.github.io/atom.xml" rel="self"/>
   <link href="http://luckily.github.io/"/>
-  <updated>2013-06-21T02:43:27+08:00</updated>
+  <updated>2013-07-13T00:56:10+08:00</updated>
   <id>http://luckily.github.io/</id>
   <author>
     <name><![CDATA[luckily]]></name>
@@ -12,6 +12,27 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Bundle 問題及排除方式]]></title>
+    <link href="http://luckily.github.io/blog/2013/07/13/an-error-occurred-while-installing-gem-and-bundler-cannot-continue/"/>
+    <updated>2013-07-13T00:21:00+08:00</updated>
+    <id>http://luckily.github.io/blog/2013/07/13/an-error-occurred-while-installing-gem-and-bundler-cannot-continue</id>
+    <content type="html"><![CDATA[<h2>目前先把有遇過的問題整理在此</h2>
+
+<hr />
+
+<p><img class="center" src="http://luckily.github.io/images/2013-07-13/bundle_error_1.png" width="700" height="200" title="image" alt="images"></p>
+
+<p>解決方式 :</p>
+
+<pre><code>$ sudo gem update bundler
+$ bundle install
+</code></pre>
+
+<hr />
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Octopress - 使用篇]]></title>
@@ -23,12 +44,12 @@
 <p>1.建立文章
    正常的情況下執行此行:</p>
 
-<pre><code>$ rake rake new_post['how-to-use-octopress']
+<pre><code>$ rake new_post['how-to-use-octopress']
 </code></pre>
 
 <p>   但如果你使用的是zsh shell的話, 就必須這樣打:</p>
 
-<pre><code>$ rake rake "new_post[how-to-use-octopress]"
+<pre><code>$ rake "new_post[how-to-use-octopress]"
 </code></pre>
 
 <br />
@@ -226,7 +247,7 @@ $ git pull origin source
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
 <span class='line-number'>5</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>``` ruby
+</pre></td><td class='code'><pre><code class=''><span class='line'>``` ruby posts_controller.rb
 </span><span class='line'>  def show
 </span><span class='line'>      @posts = Post.where(:enabled =&gt; ture)
 </span><span class='line'>  end
@@ -235,7 +256,7 @@ $ git pull origin source
 
 <p>即可得到這樣的效果</p>
 
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'><figcaption><span>posts_controller.rb</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 </pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">def</span> <span class="nf">show</span>

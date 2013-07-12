@@ -9,7 +9,7 @@
   <meta name="author" content="luckily">
 
   
-  <meta name="description" content="Octopress常用的語法 1.建立文章 正常的情況下執行此行: $ rake rake new_post['how-to-use-octopress'] 但如果你使用的是zsh shell的話, 就必須這樣打: $ rake rake "new_post[how-to-use- &hellip;">
+  <meta name="description" content="Octopress常用的語法 1.建立文章 正常的情況下執行此行: $ rake new_post['how-to-use-octopress'] 但如果你使用的是zsh shell的話, 就必須這樣打: $ rake "new_post[how-to-use-octopress]" 2.建立/ &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -108,12 +108,12 @@
 <p>1.建立文章
    正常的情況下執行此行:</p>
 
-<pre><code>$ rake rake new_post['how-to-use-octopress']
+<pre><code>$ rake new_post['how-to-use-octopress']
 </code></pre>
 
 <p>   但如果你使用的是zsh shell的話, 就必須這樣打:</p>
 
-<pre><code>$ rake rake "new_post[how-to-use-octopress]"
+<pre><code>$ rake "new_post[how-to-use-octopress]"
 </code></pre>
 
 <br />
@@ -312,6 +312,10 @@ $ git pull origin source
   <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://luckily.github.io/blog/2013/06/20/how-to-use-octopress/" data-via="" data-counturl="http://luckily.github.io/blog/2013/06/20/how-to-use-octopress/" >Tweet</a>
   
   
+  <div class="g-plusone" data-size="medium"></div>
+  
+  
+    <div class="fb-like" data-send="true" data-width="450" data-show-faces="false"></div>
   
 </div>
 
@@ -320,6 +324,8 @@ $ git pull origin source
       
         <a class="basic-alignment left" href="/blog/2013/06/14/why-octopress/" title="Previous Post: Octopress - 第一篇文章">&laquo; Octopress - 第一篇文章</a>
       
+      
+        <a class="basic-alignment right" href="/blog/2013/07/13/an-error-occurred-while-installing-gem-and-bundler-cannot-continue/" title="Next Post: Bundle 問題及排除方式">Bundle 問題及排除方式 &raquo;</a>
       
     </p>
   </footer>
@@ -331,11 +337,15 @@ $ git pull origin source
   
     <section>
   <h1>Categories</h1>
-    <ul id="category-list"><li><a href='/blog/categories/octopress/'>Octopress (3)</a></li></ul>
+    <ul id="category-list"><li><a href='/blog/categories/bundle/'>bundle (1)</a></li><li><a href='/blog/categories/octopress/'>Octopress (3)</a></li></ul>
 </section>
 <section>
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2013/07/13/an-error-occurred-while-installing-gem-and-bundler-cannot-continue/">Bundle 問題及排除方式</a>
+      </li>
     
       <li class="post">
         <a href="/blog/2013/06/20/how-to-use-octopress/">Octopress - 使用篇</a>
@@ -372,7 +382,24 @@ $ git pull origin source
 
 
 
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id; js.async = true;
+  js.src = "//connect.facebook.net/en_US/all.js#appId=212934732101925&xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
 
+
+
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
 
 
 

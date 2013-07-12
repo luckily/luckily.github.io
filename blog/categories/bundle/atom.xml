@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: bundle | Programing Notes.]]></title>
+  <link href="http://luckily.github.io/blog/categories/bundle/atom.xml" rel="self"/>
+  <link href="http://luckily.github.io/"/>
+  <updated>2013-07-13T00:56:10+08:00</updated>
+  <id>http://luckily.github.io/</id>
+  <author>
+    <name><![CDATA[luckily]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Bundle 問題及排除方式]]></title>
+    <link href="http://luckily.github.io/blog/2013/07/13/an-error-occurred-while-installing-gem-and-bundler-cannot-continue/"/>
+    <updated>2013-07-13T00:21:00+08:00</updated>
+    <id>http://luckily.github.io/blog/2013/07/13/an-error-occurred-while-installing-gem-and-bundler-cannot-continue</id>
+    <content type="html"><![CDATA[<h2>目前先把有遇過的問題整理在此</h2>
+
+<hr />
+
+<p><img class="center" src="/images/2013-07-13/bundle_error_1.png" width="700" height="200" title="&lsquo;image&rsquo; &lsquo;images&rsquo;" ></p>
+
+<p>解決方式 :</p>
+
+<pre><code>$ sudo gem update bundler
+$ bundle install
+</code></pre>
+
+<hr />
+]]></content>
+  </entry>
+  
+</feed>

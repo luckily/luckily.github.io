@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Octopress | Programing Notes.]]></title>
   <link href="http://luckily.github.io/blog/categories/octopress/atom.xml" rel="self"/>
   <link href="http://luckily.github.io/"/>
-  <updated>2013-06-21T02:43:27+08:00</updated>
+  <updated>2013-07-13T00:56:10+08:00</updated>
   <id>http://luckily.github.io/</id>
   <author>
     <name><![CDATA[luckily]]></name>
@@ -23,12 +23,12 @@
 <p>1.建立文章
    正常的情況下執行此行:</p>
 
-<pre><code>$ rake rake new_post['how-to-use-octopress']
+<pre><code>$ rake new_post['how-to-use-octopress']
 </code></pre>
 
 <p>   但如果你使用的是zsh shell的話, 就必須這樣打:</p>
 
-<pre><code>$ rake rake "new_post[how-to-use-octopress]"
+<pre><code>$ rake "new_post[how-to-use-octopress]"
 </code></pre>
 
 <br />
@@ -218,7 +218,7 @@ $ git pull origin source
 
 <p>```</p>
 
-<pre><code>``` ruby
+<pre><code>``` ruby posts_controller.rb
     def show
         @posts = Post.where(:enabled =&gt; ture)
     end
@@ -228,7 +228,7 @@ $ git pull origin source
 <p>```</p>
 
 <p>即可得到這樣的效果
-``` ruby</p>
+``` ruby posts_controller.rb</p>
 
 <pre><code>def show
     @posts = Post.where(:enabled =&gt; ture)
@@ -239,11 +239,11 @@ end
 
 <p>如果要插入圖片, 就先把圖片存放在source/images底下:
 然後放以下markdown語法:
-<code>
+<code>ruby
   <img class="center" src="/images/my_car/Audi-R8-GT_1280x1024.jpeg" width="1280" height="1024" title="image" alt="images">
 </code>
 或者直接用html語法也行
-<code>
+<code>ruby
   &lt;img class="center" src="http://luckily.github.io/images/my_car/Audi-R8-GT_1280x1024.jpeg" width="1280" height="1024" title="image" alt="images"&gt;
 </code></p>
 
