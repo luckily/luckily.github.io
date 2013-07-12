@@ -48,7 +48,7 @@ categories: Octopress
 ``` ruby
   {% img center /images/my_car/Audi-R8-GT_1280x1024.jpeg 1280 1024 'image' 'images' %}
 ```
-或者直接用html語法也行
+或者直接用html語法也行 
 ``` ruby
   <img class="center" src="/images/my_car/Audi-R8-GT_1280x1024.jpeg" width="1280" height="1024" title="image" alt="images">
 ```
