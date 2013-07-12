@@ -29,7 +29,7 @@ categories: Octopress
 
 ### 例如使用如下markdown語法
 ```
-	``` ruby
+	``` ruby posts_controller.rb
 		def show
 			@posts = Post.where(:enabled => ture)
 		end
@@ -37,7 +37,7 @@ categories: Octopress
 ```
 
 即可得到這樣的效果
-``` ruby
+``` ruby posts_controller.rb
 	def show
 		@posts = Post.where(:enabled => ture)
 	end
@@ -45,11 +45,11 @@ categories: Octopress
 
 如果要插入圖片, 就先把圖片存放在source/images底下:
 然後放以下markdown語法:
-```
+``` ruby
   {% img center /images/my_car/Audi-R8-GT_1280x1024.jpeg 1280 1024 'image' 'images' %}
 ```
 或者直接用html語法也行
-```
+``` ruby
   <img class="center" src="/images/my_car/Audi-R8-GT_1280x1024.jpeg" width="1280" height="1024" title="image" alt="images">
 ```
 

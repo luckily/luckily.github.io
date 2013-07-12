@@ -10,10 +10,10 @@ categories: Octopress
 
 1.建立文章
    正常的情況下執行此行:
-	$ rake rake new_post['how-to-use-octopress']
+	$ rake new_post['how-to-use-octopress']
 
    但如果你使用的是zsh shell的話, 就必須這樣打:
-	$ rake rake "new_post[how-to-use-octopress]"
+	$ rake "new_post[how-to-use-octopress]"
 
 <br />
 <!--more-->
